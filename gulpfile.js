@@ -80,6 +80,9 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
     var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
     .pipe(gulp.dest('dist/js'))
 
+    var buildLibs = gulp.src('app/libs/**/*') // Переносим libs в продакшен
+    .pipe(gulp.dest('dist/libs'))
+
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
     .pipe(gulp.dest('dist'));
 
